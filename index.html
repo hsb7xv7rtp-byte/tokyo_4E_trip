@@ -42,6 +42,13 @@ ol.tl li::before{content:"";position:absolute;left:-9px;top:8px;width:15px;heigh
 .box p{margin:0}
 .grp{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:10px 12px;margin-top:8px}
 .todo{background:var(--tint);border-radius:8px;padding:10px 14px;font-size:.85rem;color:var(--sub);margin-bottom:22px}
+.fare h4{margin:14px 0 4px;font-size:.95rem;color:var(--accent)}
+.fare .row,.fare .sub{display:flex;justify-content:space-between;gap:14px;padding:4px 0}
+.fare .row{border-bottom:1px dashed var(--line);font-size:.92rem}
+.fare .row span:last-child,.fare .sub span:last-child,.fare .grand span:last-child{white-space:nowrap;font-variant-numeric:tabular-nums}
+.fare .sub{font-weight:700}
+.fare .extra{color:var(--sub);font-size:.88rem}
+.fare .grand{display:flex;justify-content:space-between;gap:14px;padding:8px 12px;margin-top:6px;border-radius:8px;background:var(--tint);font-weight:700}
 @media (max-width:420px){.facts{grid-template-columns:1fr}.facts div{border-right:0;border-bottom:1px solid var(--line)}.facts div:last-child{border-bottom:0}}
 </style>
 </head>
@@ -55,7 +62,7 @@ ol.tl li::before{content:"";position:absolute;left:-9px;top:8px;width:15px;heigh
 <div class="facts">
 <div><b>日程</b><span>11/13〜11/15</span></div>
 <div><b>行き先</b><span>東京</span></div>
-<div><b>参加者</b><span>16名</span></div>
+<div><b>メンバー</b><span>16名</span></div>
 </div>
 
 <div class="tabs" role="tablist" id="tabs">
@@ -79,7 +86,7 @@ ol.tl li::before{content:"";position:absolute;left:-9px;top:8px;width:15px;heigh
 <li><div class="t">16:50</div><div class="what">NoEscape 新宿店に着く</div><div class="note">リアル体験脱出ゲーム／新宿駅から徒歩13分</div></li>
 <li><div class="t">17:00</div><div class="what">脱出ゲーム（3つのテーマ）</div><div class="note">70分／15人<br>人数と難易度は、当日変更可。</div>
 <div class="grp"><div class="what">分断された実験室からの脱出</div><div class="note">学割 2,700円</div></div>
-<div class="grp"><div class="what">危機迫るからくり城からの脱出</div><div class="note">学割 2,700円</div></div可
+<div class="grp"><div class="what">危機迫るからくり城からの脱出</div><div class="note">学割 2,700円</div></div>
 <div class="grp"><div class="what">廃病院からの脱出</div><div class="note">学割 2,400円</div></div>
 <div class="note" style="margin-top:8px"><a href="https://noescape.co.jp/shinjuku/sp/escape-theme/" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">公式サイトでテーマを見る</a></div>
 </li>
@@ -118,8 +125,22 @@ ol.tl li::before{content:"";position:absolute;left:-9px;top:8px;width:15px;heigh
 <div class="info">
 <div class="box"><h3>ホテル</h3><p>la3 Hotel Shinjuku Three-Story House (with Indoor Elevator)<br><a href="https://maps.app.goo.gl/jHsZGeVeMbwG23y16?g_st=il" target="_blank" rel="noopener" style="color:var(--accent);font-weight:700">Googleマップで場所を見る</a></p></div>
 <div class="box"><h3>持ち物</h3><ul><li>学生証</li><li>身分証明書</li><li>お金</li><li>体力</li></ul></div>
-<div class="box"><h3>電車の料金</h3><ul><li>1日目　築地 → 新宿三丁目：209円</li><li>1日目　新宿 ⇄ 京王多摩センター（往復）：712円</li><li>1日目　代々木 → 錦糸町 → 押上：431円</li><li>2日目　新宿三丁目 → 新橋：209円</li><li>2日目　新橋 → お台場海浜公園（ゆりかもめ）：325円</li><li>2日目　台場 → 豊洲（ゆりかもめ）：325円</li></ul></div>
-<div class="box"><h3>まだ決まっていないこと</h3><ul><li>昼食をどうするか</li><li>夕食をどうするか</li><li>コインロッカーをどうするか</li></ul></div>
+<div class="box fare"><h3>電車の料金（1人あたり）</h3>
+<h4>1日目</h4>
+<div class="row"><span>新宿 ⇄ 京王多摩センター（往復）</span><span>712円</span></div>
+<div class="row"><span>代々木 → 錦糸町 → 押上</span><span>431円</span></div>
+<div class="sub"><span>1日目の小計</span><span>1,143円</span></div>
+<div class="extra row"><span>新宿のホテルの人だけ：築地 → 新宿三丁目</span><span>+209円</span></div>
+<h4>2日目</h4>
+<div class="row"><span>新橋 → お台場海浜公園（ゆりかもめ）</span><span>325円</span></div>
+<div class="row"><span>台場 → 豊洲（ゆりかもめ）</span><span>325円</span></div>
+<div class="sub"><span>2日目の小計</span><span>650円</span></div>
+<div class="extra row"><span>新宿のホテルの人だけ：新宿三丁目 → 新橋</span><span>+209円</span></div>
+<div class="grand"><span>全員共通の合計</span><span>1,793円</span></div>
+<div class="grand"><span>新宿のホテルの人の合計</span><span>2,211円</span></div>
+<p class="note" style="margin-top:8px">他のホテルの人の朝の移動は含まれていません。</p>
+</div>
+<div class="box"><h3>まだ決まっていないこと</h3><ul><li>昼食をどうするか</li><li>夕食をどうするか</li><li>荷物をどうするか</li></ul></div>
 
 </div>
 </main>
